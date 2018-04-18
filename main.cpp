@@ -1,5 +1,9 @@
 #include <iostream>
+#include <utility>
 using namespace std;
+
+void leastToGreatest(int &, int &, int &);
+
 
 int main()
 {
@@ -9,7 +13,7 @@ int main()
   cin>>red>>green>>blue;
   //...END OF "DO NOT CHANGE" AREA
 
-
+  leastToGreatest(red, green, blue);
 
 
 
@@ -19,3 +23,17 @@ int main()
   return 0;
   //...END OF "DO NOT CHANGE" AREA
 }
+
+void leastToGreatest(int &one, int &two, int &three)
+{
+    if (one > two) {
+        std::swap(one, two);
+    }
+    if (one > three) {
+        std::swap(one, three);
+    }
+    if (two > three) {
+        std::swap(two, three);
+    }
+}
+
